@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Astro Bites | Tu Cafetería Online</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Open Graph / Meta etiquetas para redes sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Astro Bite | Café de Especialidad & Repostería Artesanal">
+  <meta property="og:description" content="Descubre el sabor cósmico de Astro Bite. Café recién tostado, grano seleccionado y delicias artesanales con envío directo a tu puerta.">
+  <meta property="og:image" content="src/AstroBite.png">
+  <meta property="og:url" content="https://claudiacoppola.github.io/AstroBitesVSC/#experiencias">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    /* Desplazamiento suave para el estilo One Page */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Evita que la navbar fija solape el inicio de cada sección */
+    section {
+      scroll-margin-top: 75px;
+      padding: 60px 0;
+    }
+  </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#menuNavegacion" data-bs-smooth-scroll="true" tabindex="0">
+
+  <!-- NAVBAR FIJO -->
+  <nav id="menuNavegacion" class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm px-3">
+    <div class="container-fluid">
+      
+      <!-- Logo de la marca (apunta al inicio) -->
+      <a class="navbar-brand fw-bold" href="#home">
+        <img src="src/AstroBite.png" title="Astro Bite Cafetería" class="object-fit-cover" alt="Logo Astro Bite Cafetería" width="30">
+      </a>
+
+      <!-- Botón Hamburguesa -->
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#menuResponsive" 
+        aria-controls="menuResponsive" 
+        aria-expanded="false" 
+        aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces del menú alineados con los IDs de cada sección -->
+      <div class="collapse navbar-collapse" id="menuResponsive">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experiencias">Experiencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#productos">Productos exclusivos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sucursales">Encontrá tu cafetería</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL / SECCIONES ONE PAGE -->
+  <main class="mt-5 pt-3">
+
+    <!-- SECCIÓN 1: HOME (Carrusel) -->
+    <section id="home" class="carrusel">
+      <div class="container bg-white p-4 shadow-sm rounded">
+        <div class="row align-items-center g-4">
+          
+          <!-- Columna 1: Información -->
+          <div class="col-12 col-md-5">
+            <span class="badge bg-primary mb-2">Destacado</span>
+            <h2 class="fw-bold">Novedades y Galerías</h2>
+            <p class="text-secondary">
+              A la derecha encontrarás el carrusel de imágenes con reproducción automática, navegación por flechas e indicadores circulares.
+            </p>
+            <a href="#productos" class="btn btn-outline-primary">Saber más</a>
+          </div>
+
+          <!-- Columna 2: Carrusel -->
+          <div class="col-12 col-md-7">
+            <div id="carruselGaleria" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+              
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carruselGaleria" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carruselGaleria" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carruselGaleria" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner rounded overflow-hidden">
+                <div class="carousel-item active">
+                  <img src="src/coffee-shop-interior.jpg" class="d-block w-100 object-fit-cover" style="height: 380px;" alt="Interior de la cafetería">
+                  <div class="carousel-caption d-none d-sm-block">
+                    <div class="custom-caption">
+                      <h5 class="fw-bold m-0">Ambiente Cómodo</h5>
+                      <p class="small m-0 text-white-50">Disfruta de un espacio único para relajarte.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="src/coffee-shop-latte-art.jpg" class="d-block w-100 object-fit-cover" style="height: 380px;" alt="Arte en café">
+                  <div class="carousel-caption d-none d-sm-block">
+                    <div class="custom-caption">
+                      <h5 class="fw-bold m-0">Café de Especialidad</h5>
+                      <p class="small m-0 text-white-50">Granos seleccionados y tostado artesanal.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img src="src/coffee-shop-barista.jpg" class="d-block w-100 object-fit-cover" style="height: 380px;" alt="Barista preparando café">
+                  <div class="carousel-caption d-none d-sm-block">
+                    <div class="custom-caption">
+                      <h5 class="fw-bold m-0">Pasión por el Detalle</h5>
+                      <p class="small m-0 text-white-50">Nuestros baristas preparan cada taza a la perfección.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carruselGaleria" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carruselGaleria" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: EXPERIENCIAS -->
+    <section id="experiencias" class="bg-light">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-3">Nuestras Experiencias</h2>
+        <p class="text-secondary mb-4">Descubre catas guiadas, talleres de barismo y momentos únicos preparados para ti.</p>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 p-3 border-0 shadow-sm">
+              <i class="fa fa-coffee fa-3x text-primary my-2" aria-hidden="true"></i>
+              <h4 class="fw-bold">Cata de Café</h4>
+              <p class="text-muted">Aprende a diferenciar notas, aromas y orígenes de granos de todo el mundo.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 p-3 border-0 shadow-sm">
+              <i class="fa fa-graduation-cap fa-3x text-primary my-2" aria-hidden="true"></i>
+              <h4 class="fw-bold">Talleres de Barista</h4>
+              <p class="text-muted">Espressos perfectos y técnicas de latte art explicadas por profesionales.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 p-3 border-0 shadow-sm">
+              <i class="fa fa-birthday-cake fa-3x text-primary my-2" aria-hidden="true"></i>
+              <h4 class="fw-bold">Maridaje Artesanal</h4>
+              <p class="text-muted">La combinación exacta entre repostería fresca y diferentes métodos de filtrado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: PRODUCTOS EXCLUSIVOS -->
+    <section id="productos">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4">Productos Exclusivos</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Blend Estelar</h5>
+                <p class="card-text text-secondary">Notas a chocolate amargo y avellanas. Tostado medio.</p>
+                <span class="fw-bold text-primary">$ 450</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Edición Cósmica</h5>
+                <p class="card-text text-secondary">Grano de origen único con matices frutales y cítricos.</p>
+                <span class="fw-bold text-primary">$ 520</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Kit Barista en Casa</h5>
+                <p class="card-text text-secondary">Incluye prensa francesa, vaso térmico y bolsa de café de 250g.</p>
+                <span class="fw-bold text-primary">$ 1.290</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: ENCONTRÁ TU CAFETERÍA -->
+    <section id="sucursales" class="bg-light">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-3">Encontrá tu Cafetería</h2>
+        <p class="text-secondary mb-4">Visítanos en nuestras distintas sucursales o realiza tu pedido con envío a domicilio.</p>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card p-4 shadow-sm border-0">
+              <h5 class="fw-bold">Sucursal Central</h5>
+              <p class="text-muted mb-1"><i class="fa fa-map-marker text-primary me-2"></i>Av. Principal 1234, Montevideo</p>
+              <p class="text-muted"><i class="fa fa-clock-o text-primary me-2"></i>Lunes a Domingo: 08:00 - 20:00 hs</p>
+              <button class="btn btn-primary mt-2">Ver mapa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
